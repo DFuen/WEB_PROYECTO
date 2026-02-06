@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+*{@apply m-0 p-0};
+
+body{@apply w-screen h-screen};
+
+nav,.logo,.menu{@apply flex};
+
+/*NAVEGADOR*/
+nav{ @apply h-[12%] z-9999 border-b-3 to-black bg-[#AE6F16]};
+
+.logo{@apply h-full w-[15%] z-9999 justify-items-center /*EFECTO LOGO*/ hover:scale-[1.3]};
+
+.logo img{@apply block max-w-full max-h-full object-contain};
+
+.menu{@apply w-[85%]};
+
+.item-menu,.item-menu a{@apply bg-[AE6F16] decoration-0 text-white hover:bg-[#875612]};
+
+.item-menu{@apply z-9999 relative text-center content-center hover:border hover:border-black};
+
+.item-menu h3,.sub-item-content h4,.sub-item-content a{@apply h-full content-center};
+
+/*SUBMENU*/
+
+.sub-item-content,.sub-item{@apply w-full h-[80%]};
+
+.sub-item-content{@apply absolute top-full opacity-0 invisible};
+
+.sub-item{@apply mt-[0.3%] h-full w-full block};
+
+/*MOSTRAR EL SUBMENU AL PASAR EL RATON*/
+
+.item-menu:hover .sub-item-content{@apply hover:visible hover:opacity-100}
+
+/*CUERPO PRINCIPAL*/
+main{@apply relative h-[calc(100vh-17.3%)] overflow-hidden z-0 bg-[#FAF103]};
+
+.content{@apply h-full w-full border-0 overflow-y-auto overflow-x-hidden};
+
+footer{@apply relative h-[5%] z-999 content-center justify-items-center bg-amber-800 text-white}
