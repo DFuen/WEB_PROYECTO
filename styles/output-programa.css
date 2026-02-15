@@ -167,147 +167,142 @@
   margin: calc(var(--spacing) * 0);
   padding: calc(var(--spacing) * 0);
 }
-body {
+.content-web {
   height: 100vh;
   width: 100%;
-}
-nav, main, footer, .item-menu {
-  width: 100%;
-}
-nav, .logo, .menu {
-  display: flex;
-}
-nav {
-  z-index: 9999;
-  height: 12%;
-  border-bottom-style: var(--tw-border-style);
-  border-bottom-width: 3px;
-  border-color: color-mix(in srgb, #000 45%, transparent);
-  @supports (color: color-mix(in lab, red, red)) {
-    border-color: color-mix(in oklab, var(--color-black) 45%, transparent);
-  }
-  background-color: #AE6F16;
-}
-.logo {
-  z-index: 999;
-  height: 100%;
-  width: 15%;
-  justify-content: center;
-}
-.logo img {
-  display: block;
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-}
-.logo img:hover {
-  --tw-scale-x: 125%;
-  --tw-scale-y: 125%;
-  --tw-scale-z: 125%;
-  scale: var(--tw-scale-x) var(--tw-scale-y);
-}
-.menu {
-  width: 85%;
-}
-.item-menu, .item-menu a {
-  background-color: #AE6F16;
-  color: var(--color-white);
-  text-decoration-line: none;
-}
-.item-menu {
-  position: relative;
-  z-index: 9999;
   justify-items: center;
+  padding-bottom: 6%;
+}
+.evento-container {
+  margin-inline: 5%;
+  margin-top: 1%;
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-black);
+  --tw-shadow: 2px 3px 5px var(--tw-shadow-color, black);
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+.evento-header, .evento-info, .evento-programa {
+  margin: 1%;
+  margin-left: 3%;
+  width: 70%;
+}
+.nota {
+  margin: 1%;
   text-align: center;
 }
-.item-menu h3 {
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
+.programa-dia li {
+  list-style-type: none;
 }
-.sub-item-content h4, .sub-item-content a {
-  height: 100%;
+.registro {
+  margin-top: 1%;
+  width: 80%;
 }
-.item-menu:hover, .item-menu a:hover {
-  background-color: #875612;
-}
-.item-menu:hover {
-  border-right-style: var(--tw-border-style);
-  border-right-width: 1px;
-  border-left-style: var(--tw-border-style);
-  border-left-width: 1px;
+.boton {
+  height: 50px;
+  align-content: center;
+  border-style: var(--tw-border-style);
+  border-width: 2px;
   border-color: var(--color-black);
-}
-.sub-item-content, .sub-item {
-  height: 80%;
-  width: 100%;
-}
-.sub-item-content {
-  visibility: hidden;
-  position: absolute;
-  top: 100%;
-  opacity: 0%;
-}
-.sub-item {
-  margin-top: 0.3%;
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-.item-menu:hover .sub-item-content {
-  visibility: visible;
-  opacity: 100%;
-}
-main {
-  position: relative;
-  z-index: 0;
-  height: calc(100vh - 17.3%);
-  overflow: hidden;
-  background-color: #FAF103;
-}
-.content {
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  --tw-border-style: none;
-  border-style: none;
-}
-footer {
-  position: relative;
-  z-index: 999;
-  height: 5%;
-  background-color: brown;
+  background-color: #82A91B;
+  text-align: center;
+  font-size: 25px;
   color: var(--color-white);
+}
+.boton:hover {
+  border-style: var(--tw-border-style);
+  border-width: 3px;
+  border-color: var(--color-white);
+  background-color: #90a752;
 }
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
 }
-@property --tw-scale-x {
+@property --tw-shadow {
   syntax: "*";
   inherits: false;
-  initial-value: 1;
+  initial-value: 0 0 #0000;
 }
-@property --tw-scale-y {
+@property --tw-shadow-color {
   syntax: "*";
   inherits: false;
-  initial-value: 1;
 }
-@property --tw-scale-z {
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
   syntax: "*";
   inherits: false;
-  initial-value: 1;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
     }
   }
 }

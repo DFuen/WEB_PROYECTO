@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+* {
+	@apply m-0 p-0;
+}
+.content-web {
+	@apply w-full h-screen justify-items-center pb-[6%];
+}
+.evento-container {
+	@apply border border-black shadow-[2px_3px_5px_black] mt-[1%] mx-[5%];
+}
+.evento-header, .evento-info, .evento-programa {
+	@apply w-[70%] m-[1%] ml-[3%];
+}
+.nota {
+	@apply text-center m-[1%];
+}
+.programa-dia li {
+	@apply list-none;
+}
+.registro {
+	@apply mt-[1%] w-[80%];
+}
+.boton {
+	@apply text-center content-center bg-[#82A91B] border-2 border-black text-white h-[50px] text-[25px];
+}
+.boton:hover {
+	@apply bg-[#90a752] border-3 border-white;
+}

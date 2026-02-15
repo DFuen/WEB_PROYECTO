@@ -1,41 +1,88 @@
 @import "tailwindcss";
 
-*{@apply m-0 p-0};
+* {
+    @apply m-0 p-0;
+}
 
-body{@apply w-screen h-screen};
+body {
+    @apply w-full h-screen;
+}
 
-nav,.logo,.menu{@apply flex};
+nav, main, footer, .item-menu {
+    @apply w-full;
+}
 
-/*NAVEGADOR*/
-nav{ @apply h-[12%] z-9999 border-b-3 to-black bg-[#AE6F16]};
+nav, .logo, .menu {
+    @apply flex;
+}
 
-.logo{@apply h-full w-[15%] z-9999 justify-items-center /*EFECTO LOGO*/ hover:scale-[1.3]};
+nav {
+    @apply h-[12%] z-[9999] border-b-[3px] border-black/45 bg-[#AE6F16];
+}
 
-.logo img{@apply block max-w-full max-h-full object-contain};
+.logo {
+    @apply h-full w-[15%] z-[999] justify-center;
+}
 
-.menu{@apply w-[85%]};
+.logo img {
+    @apply block max-w-full max-h-full object-contain;
+}
 
-.item-menu,.item-menu a{@apply bg-[AE6F16] decoration-0 text-white hover:bg-[#875612]};
+.logo img:hover {
+    @apply scale-125;
+}
 
-.item-menu{@apply z-9999 relative text-center content-center hover:border hover:border-black};
+.menu {
+    @apply w-[85%];
+}
 
-.item-menu h3,.sub-item-content h4,.sub-item-content a{@apply h-full content-center};
+.item-menu, .item-menu a {
+    @apply bg-[#AE6F16] no-underline text-white;
+}
 
-/*SUBMENU*/
+.item-menu {
+    @apply z-[9999] relative text-center justify-items-center;
+}
 
-.sub-item-content,.sub-item{@apply w-full h-[80%]};
+.item-menu h3 {
+    @apply h-full flex items-center justify-center;
+}
+.sub-item-content h4, .sub-item-content a {
+    @apply h-full;
+}
 
-.sub-item-content{@apply absolute top-full opacity-0 invisible};
+.item-menu:hover, .item-menu a:hover {
+    @apply bg-[#875612];
+}
 
-.sub-item{@apply mt-[0.3%] h-full w-full block};
+.item-menu:hover {
+    @apply border-l border-r border-black;
+}
 
-/*MOSTRAR EL SUBMENU AL PASAR EL RATON*/
+.sub-item-content, .sub-item {
+    @apply w-full h-[80%];
+}
 
-.item-menu:hover .sub-item-content{@apply hover:visible hover:opacity-100}
+.sub-item-content {
+    @apply absolute top-full opacity-0 invisible;
+}
 
-/*CUERPO PRINCIPAL*/
-main{@apply relative h-[calc(100vh-17.3%)] overflow-hidden z-0 bg-[#FAF103]};
+.sub-item {
+    @apply w-full mt-[0.3%] h-full block;
+}
 
-.content{@apply h-full w-full border-0 overflow-y-auto overflow-x-hidden};
+.item-menu:hover .sub-item-content {
+    @apply opacity-100 visible;
+}
 
-footer{@apply relative h-[5%] z-999 content-center justify-items-center bg-amber-800 text-white}
+main {
+    @apply relative h-[calc(100vh-17.3%)] overflow-hidden z-0 bg-[#FAF103];
+}
+
+.content {
+    @apply h-full w-full border-none overflow-y-auto overflow-x-hidden;
+}
+
+footer {
+    @apply relative h-[5%] z-[999] bg-[brown] text-white;
+}
